@@ -36,7 +36,7 @@ export function TransactionCard({ item }) {
         className="font-semibold"
         style={{ color: type.txtColor }}
       >
-        {formatCurrency(`${type.sign}${item.amount}`)}
+        {type.sign}{formatCurrency(item.amount)} €
       </p>
     </div>
   );

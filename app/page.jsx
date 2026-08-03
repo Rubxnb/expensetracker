@@ -30,7 +30,7 @@ export default function Home() {
 
       {/* Mobile */}
       <div className="flex flex-col lg:hidden gap-4">
-        <ResumeView transactions={transactions} />
+        <ResumeView transactions={transactions} categoryResume={false}/>
 
         <TransactionsView
           transactions={transactions}
@@ -39,6 +39,8 @@ export default function Home() {
           onMonthChange={setMonth}
           onYearChange={setYear}
         />
+
+        <ResumeView transactions={transactions} summaryResume={false}/>
       </div>
     </>
   );
