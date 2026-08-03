@@ -33,10 +33,13 @@ export function BottomNavigation({ onAdd }) {
         </span>
       </Link>
 
-      <button className="rounded-full bg-[#4F7C6C] text-[#FFFFFF] p-1 mb-2 font-"
-      onClick={onAdd}>
-        <Plus />
-      </button>
+      <div className="rounded-full bg-[#FFFFFF] p-1 mb-9 border-t border-[#E2E8E3]">
+        <button className="rounded-full bg-[#4F7C6C] text-[#FFFFFF] p-2"
+        onClick={onAdd}>
+          <Plus size="32"/>
+        </button>
+
+      </div>
 
       <Link
         href="/summary"
