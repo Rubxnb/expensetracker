@@ -8,7 +8,7 @@ export function ResumeView({ transactions, summaryResume=true, categoryResume=tr
   const categorySummary = getCategorySummary(transactions);
 
   return (
-    <div className="flex flex-col gap-2.5 h-auto lg:h-full lg:min-h-0">
+    <div className="flex flex-col gap-2.5 lg:h-auto lg:h-full lg:min-h-0">
       { summaryResume && (
         <div className="shrink-0 grid grid-cols-3 lg:grid-cols-1 gap-2.5">
           <SummaryCard 
