@@ -3,6 +3,7 @@
 import { ResumeView } from "@/views/ResumeView";
 import { TransactionsView } from "@/views/TransactionsView";
 import { useTransactions } from "@/context/TransactionsContext";
+import { MonthSelector } from "@/components/MonthSelector/MonthSelector";
 
 export default function Home() {
   const {
@@ -29,18 +30,25 @@ export default function Home() {
       </div>
 
       {/* Mobile */}
-      <div className="flex flex-col lg:hidden gap-4">
-        <ResumeView transactions={transactions} categoryResume={false}/>
-
-        <TransactionsView
-          transactions={transactions}
+      <div className="flex flex-col lg:hidden gap-4 h-full min-h-0">
+        <MonthSelector
           year={year}
           month={month}
           onMonthChange={setMonth}
-          onYearChange={setYear}
-        />
+          onYearChange={setYear}/>
+        <ResumeView transactions={transactions} categoryResume={false}/>
+        <div className="h-full overflow-y-auto">
+          <TransactionsView
+            transactions={transactions}
+            year={year}
+            month={month}
+            onMonthChange={setMonth}
+            onYearChange={setYear}
+            mobile={true}
+          />
 
-        <ResumeView transactions={transactions} summaryResume={false}/>
+          <ResumeView transactions={transactions} summaryResume={false}/>
+        </div>
       </div>
     </>
   );

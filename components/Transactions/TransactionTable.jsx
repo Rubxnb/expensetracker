@@ -11,7 +11,7 @@ export function TransactionTable({ className, transactions }) {
         />
       </div>
 
-      <div className="lg:hidden h-full overflow-y-auto scrollbar-thin scrollbar-thumb-[#D5DDD8] scrollbar-track-transparent">
+      <div className="lg:hidden lg:h-full lg:overflow-y-auto lg:scrollbar-thin lg:scrollbar-thumb-[#D5DDD8] lg:scrollbar-track-transparent">
         <TransactionMobileList
           transactions={transactions}
         />

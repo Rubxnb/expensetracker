@@ -11,7 +11,7 @@ export function TransactionCard({ item }) {
     <div className="flex items-center justify-between rounded-xl border border-[#E2E8E3] bg-white p-4">
       <div className="flex items-center gap-3">
         <div
-          className="flex h-11 w-11 items-center justify-center rounded-xl"
+          className="flex h-11 w-19 items-center justify-center rounded-xl"
           style={{
             backgroundColor: type.bgColor,
             color: type.txtColor,

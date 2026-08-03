@@ -48,11 +48,14 @@ export function MonthSelector({ year, month, onMonthChange, onYearChange }) {
   return (
     <div
       ref={ref}
-      className="relative inline-block"
+      className="relative lg:inline-block w-full lg:w-auto"
     >
       <button
         onClick={() => setOpen(!open)}
         className="
+          w-full
+          lg:justify-start
+          justify-between
           flex items-center gap-2
           rounded-xl
           border border-[#E2E8E3]
@@ -63,14 +66,16 @@ export function MonthSelector({ year, month, onMonthChange, onYearChange }) {
           hover:cursor-pointer
         "
       >
-        <CalendarDays
-          size={18}
-          className="text-[#6B7A72]"
-        />
+        <div className="flex items-center gap-2">
+          <CalendarDays
+            size={18}
+            className="text-[#6B7A72]"
+          />
 
-        <span className="font-medium">
-          {MONTHS[month - 1]} {year}
-        </span>
+          <span className="font-medium">
+            {MONTHS[month - 1]} {year}
+          </span>
+        </div>
 
         <ChevronDown
           size={16}

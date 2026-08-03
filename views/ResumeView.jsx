@@ -8,7 +8,7 @@ export function ResumeView({ transactions, summaryResume=true, categoryResume=tr
   const categorySummary = getCategorySummary(transactions);
 
   return (
-    <div className="flex flex-col gap-2.5 h-auto lg:h-full">
+    <div className="flex flex-col gap-2.5 h-auto lg:h-full lg:min-h-0">
       { summaryResume && (
         <div className="shrink-0 grid grid-cols-3 lg:grid-cols-1 gap-2.5">
           <SummaryCard 
@@ -35,7 +35,7 @@ export function ResumeView({ transactions, summaryResume=true, categoryResume=tr
         </div>
       )}
       { categoryResume && (
-        <div className={"lg:h-full flex-1 min-h-0 overflow-y-auto scrollbar-thin scrollbar-thumb-[#D5DDD8] scrollbar-track-transparent pr-2"}>
+        <div className={"mt-3 lg:mt-0 lg:h-full lg:flex-1 lg:min-h-0 lg:overflow-y-auto lg:scrollbar-thin lg:scrollbar-thumb-[#D5DDD8] lg:scrollbar-track-transparent lg:pr-2 w-full"}>
           <div className="flex flex-col gap-2.5">
             <CategorySummary
               label="Gasto por categoría"
