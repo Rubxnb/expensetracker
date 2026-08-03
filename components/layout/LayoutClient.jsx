@@ -34,7 +34,7 @@ export default function LayoutClient({ children }) {
         {children}
       </main>
 
-      <BottomNavigation />
+      <BottomNavigation onAdd={() => setOpen(true)}/>
 
       <Modal
         open={open}
