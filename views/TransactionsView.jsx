@@ -26,7 +26,7 @@ export function TransactionsView({transactions, year, month, onMonthChange, onYe
 
         { mobile && (
           <div 
-            className="flex ml-1.5 mb-2 items-center text-sm gap-1"
+            className="sticky top-0 z-10 backdrop-blur-md bg-[#F6F8F6] shrink-0 flex p-1.5 pb-2 items-center text-sm gap-1"
             onClick={() => setOpen(!open)}>
             <p>Movimientos</p> 
             {
