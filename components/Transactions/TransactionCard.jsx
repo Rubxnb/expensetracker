@@ -33,7 +33,7 @@ export function TransactionCard({ item }) {
       </div>
 
       <p
-        className="font-semibold"
+        className="font-semibold whitespace-nowrap shrink-0"
         style={{ color: type.txtColor }}
       >
         {type.sign}{formatCurrency(item.amount)} €
