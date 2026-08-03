@@ -1,0 +1,130 @@
+import { Wallet, Car, Gamepad2, Cpu, TrendingUp, Dumbbell, Gem, RefreshCw, House, HeartPulse, BanknoteArrowUp, BanknoteArrowDown, Beef, Fuel, Shirt, Utensils, BottleWine, BanknoteX, HandCoins, Plane } from "lucide-react";
+
+export const CATEGORIES = {
+  SALARY: {
+      label: 'Salario',
+      icon: Wallet,
+      expense: false,
+      income: true,
+    },
+  BIZUMIN: {
+    label: 'Bizum',
+    icon: BanknoteArrowUp,
+    expense: false,
+    income: true,
+  },
+  OTHERSIN: {
+    label: 'Otros ingresos',
+    icon: HandCoins,
+    expense: false,
+    income: true,
+  },
+  FOOD: {
+    label: 'Alimentación',
+    icon: Beef,
+    expense: true,
+    income: false,
+  },
+  BAR: {
+    label: 'Bar',
+    icon: BottleWine,
+    expense: true,
+    income: false,
+  },
+  BIZUMOUT: {
+    label: 'Bizum',
+    icon: BanknoteArrowDown,
+    expense: true,
+    income: false,
+  },
+  FUEL: {
+    label: 'Gasolina',
+    icon: Fuel,
+    expense: true,
+    income: false,
+  },
+  RESTAURANT: {
+    label: 'Restaurante',
+    icon: Utensils,
+    expense: true,
+    income: false,
+  },
+  HOME: {
+    label: 'Gastos piso',
+    icon: House,
+    expense: true,
+    income: false,
+  },
+  CAR: {
+    label: 'Coche',
+    icon: Car,
+    expense: true,
+    income: false,
+  },
+  VIDEOGAMES: {
+    label: 'Videojuegos',
+    icon: Gamepad2,
+    expense: true,
+    income: false,
+  },
+  TECHNOLOGY: {
+    label: 'Tecnología',
+    icon: Cpu,
+    expense: true,
+    income: false,
+  },
+  INVESTMENT: {
+    label: 'Inversión',
+    icon: TrendingUp,
+    expense: true,
+    income: false,
+  },
+  GYM: {
+    label: 'Gimnasio',
+    icon: Dumbbell,
+    expense: true,
+    income: false,
+  },
+  LEISURE: {
+    label: 'Ocio',
+    icon: Gem,
+    expense: true,
+    income: false,
+  },
+  SUBSCRIPTIONS: {
+    label: 'Suscripciones',
+    icon: RefreshCw,
+    expense: true,
+    income: false,
+  },
+  RENT: {
+    label: 'Alquiler',
+    icon: House,
+    expense: true,
+    income: false,
+  },
+  CLOTHES: {
+    label: 'Ropa',
+    icon: Shirt,
+    expense: true,
+    income: false,
+  },
+  TRAVEL: {
+    label: 'Viaje',
+    icon: Plane,
+    expense: true,
+    income: false,
+  },
+  HEALTH: {
+    label: 'Salud',
+    icon: HeartPulse,
+    expense: true,
+    income: false,
+  },
+  OTHERSOUT: {
+    label: 'Otros gastos',
+    icon: BanknoteX,
+    expense: true,
+    income: false,
+  },
+};
