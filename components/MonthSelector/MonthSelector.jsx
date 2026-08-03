@@ -85,10 +85,13 @@ export function MonthSelector({ year, month, onMonthChange, onYearChange }) {
           className="
             absolute
             top-full
-            left-1/2
-            -translate-x-1/2
+            right-1/25
+            -translate-x-
+            lg:left-1/2
+            lg:-translate-x-1/2
             mt-2
-            w-[360px]
+            lg:w-[360px]
+            w-[300px]
             rounded-xl
             border
             border-[#E2E8E3]
