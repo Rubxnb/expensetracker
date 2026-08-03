@@ -8,10 +8,10 @@ export function TransactionCard({ item }) {
   const { icon: Icon, label } = CATEGORIES[item.category];
 
   return (
-    <div className="flex items-center justify-between rounded-xl border border-[#E2E8E3] bg-white p-4">
-      <div className="flex items-center gap-3">
+    <div className="flex items-center justify-between rounded-xl border border-[#E2E8E3] bg-white p-2">
+      <div className="flex items-center gap-3 min-w-0 flex-1">
         <div
-          className="flex h-11 w-19 items-center justify-center rounded-xl"
+          className="flex h-10 w-10 items-center justify-center rounded-xl shrink-0"
           style={{
             backgroundColor: type.bgColor,
             color: type.txtColor,
@@ -20,12 +20,12 @@ export function TransactionCard({ item }) {
           <Icon size={20} />
         </div>
 
-        <div>
-          <p className="font-medium text-[#22302A]">
+        <div className="flex-1 min-w-0">
+          <p className="font-medium text-sm text-[#22302A]">
             {label}
           </p>
 
-          <p className="text-sm text-[#9AA69F]">
+          <p className="text-xs text-[#9AA69F] truncate">
             {formatDate(item.date)}
             {item.note && ` · ${item.note}`}
           </p>
@@ -33,7 +33,7 @@ export function TransactionCard({ item }) {
       </div>
 
       <p
-        className="font-semibold whitespace-nowrap shrink-0"
+        className="text-sm font-semibold whitespace-nowrap shrink-0"
         style={{ color: type.txtColor }}
       >
         {type.sign}{formatCurrency(item.amount)} €
