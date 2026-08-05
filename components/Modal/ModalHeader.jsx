@@ -2,7 +2,7 @@ import { X } from "lucide-react";
 
 export function ModalHeader({ title, onClose }) {
   return (
-    <div className="flex items-center justify-between px-6 py-5 border-b border-[#E2E8E3]">
+    <div className="flex items-center justify-between px-6 pt-2 lg:py-5 lg:border-b lg:border-[#E2E8E3]">
 
       <h2 className="font-semibold text-lg">
         {title}
@@ -21,7 +21,9 @@ export function ModalHeader({ title, onClose }) {
           hover:bg-[#F6F8F6]
         "
       >
-        <X size={18} />
+        <div className="bg-[#E5F3EB] text-[#3F9469] rounded-sm p-1">
+          <X size={18} />
+        </div>
       </button>
 
     </div>

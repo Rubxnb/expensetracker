@@ -60,7 +60,7 @@ export function TransactionForm({ onClose }) {
     <form
       id="transaction-form"
       onSubmit={handleSubmit}
-      className="flex flex-col gap-6 p-9"
+      className="flex flex-col gap-6 p-4 lg:p-9"
     >
       {/* Tipo */}
       <div>

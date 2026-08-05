@@ -7,9 +7,9 @@ export function Modal({ open, children, label, onClose }) {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed lg:inset-0 bottom-0 z-50 flex items-center justify-center">
       {/* Fondo */}
-      <div className="absolute inset-0 bg-black/35 backdrop-blur-sm" />
+      <div className="fixed lg:absolute inset-0 bg-black/35 backdrop-blur-sm" />
 
       {/* Modal */}
       <div

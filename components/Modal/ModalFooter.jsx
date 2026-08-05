@@ -9,6 +9,8 @@ export function ModalFooter({
             <button
                 onClick={onCancel}
                 className="
+                    hidden
+                    lg:block
                     flex-1
                     h-11
                     rounded-xl
