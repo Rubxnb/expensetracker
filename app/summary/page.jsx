@@ -16,9 +16,16 @@ export default function Summary() {
       fetchData();
     }, [year]);
   return (
-    <div className="grid grid-cols-[40%_60%] gap-4">
-      <AnualSummary summary={summary} />
-      <MonthlySummaryChart summary={summary} />
+    <div className="flex flex-col lg:grid lg:grid-cols-[40%_60%] gap-4 overflow-y-auto h-full scrollbar-thin scrollbar-thumb-[#D5DDD8] scrollbar-track-transparent">
+      <div className="lg:hidden font-semibold">
+        <p>Resumen anual · {new Date().getFullYear()}</p>
+      </div>
+      <div className="order-2 lg:order-1">
+        <AnualSummary summary={summary} />
+      </div>
+      <div className="order-1 lg:order-">
+        <MonthlySummaryChart summary={summary} />
+      </div>
     </div>
   )
 }

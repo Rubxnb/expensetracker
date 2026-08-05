@@ -4,7 +4,7 @@ import { CalendarDays } from "lucide-react";
 
 export function DateInput({ value, onChange }) {
   return (
-    <div className="relative">
+    <div className="relative ">
       <CalendarDays
         size={18}
         className="
@@ -22,7 +22,8 @@ export function DateInput({ value, onChange }) {
         value={value}
         onChange={(e) => onChange(e.target.value)}
         className="
-          w-full
+          w-[150px]
+          lg:w-full
           h-11
           rounded-lg
           border

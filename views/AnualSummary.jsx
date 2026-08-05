@@ -6,7 +6,7 @@ export function AnualSummary({summary}) {
   const totalSummary = totalMonthlySummary(summary);
   return (
     <div>
-      <p>Resumen anual · 2026</p>
+      <p className="hidden lg:block">Resumen anual · {new Date().getFullYear()}</p>
       <AnnualSummaryTable summary={summary} totalSummary={totalSummary}/>
     </div>
   );

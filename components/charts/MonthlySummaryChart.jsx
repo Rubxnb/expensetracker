@@ -23,7 +23,7 @@ export function MonthlySummaryChart({ summary }) {
     };
 
     return {
-      month: name.slice(0, 3),
+      month: name.charAt(0), // E F M A M J J A S O N D
       income: month.income,
       expense: month.expense,
       balance: month.balance,
@@ -31,16 +31,23 @@ export function MonthlySummaryChart({ summary }) {
   });
 
   return (
-    <div className="rounded-xl border border-[#E2E8E3] bg-white p-6">
-      <h2 className="mb-6 text-lg font-semibold text-[#22302A]">
+    <div className="rounded-xl border border-[#E2E8E3] bg-white p-2">
+      <h2 className="hidden lg:bloc mb-4 text-lg font-semibold text-[#22302A]">
         Ingresos vs gastos vs balance
       </h2>
 
-      <ResponsiveContainer
-        width="100%"
-        height={380}
-      >
-        <BarChart data={data}>
+      <ResponsiveContainer width="100%" height={260}>
+        <BarChart
+          data={data}
+          margin={{
+            top: 10,
+            right: 10,
+            left: -20,
+            bottom: 5,
+          }}
+          barGap={2}
+          barCategoryGap="15%"
+        >
           <CartesianGrid
             strokeDasharray="3 3"
             vertical={false}
@@ -51,38 +58,64 @@ export function MonthlySummaryChart({ summary }) {
             dataKey="month"
             tickLine={false}
             axisLine={false}
+            tick={{
+              fontSize: 12,
+              fill: "#64748B",
+            }}
           />
 
           <YAxis
+            width={52}
             tickLine={false}
             axisLine={false}
+            tick={{ fontSize: 12, fill: "#64748B" }}
+            tickFormatter={(value) => {
+              if (value >= 1000) return `${value / 1000}k`;
+              return value;
+            }}
           />
 
           <Tooltip
             formatter={(value) => `${formatCurrency(value)} €`}
+            contentStyle={{
+              borderRadius: "12px",
+              border: "1px solid #E2E8E3",
+            }}
           />
 
-          <Legend />
+          <Legend
+            verticalAlign="bottom"
+            align="center"
+            iconType="square"
+            iconSize={10}
+            wrapperStyle={{
+              fontSize: 13,
+              paddingTop: 10,
+            }}
+          />
 
           <Bar
             dataKey="income"
             name="Ingresos"
             fill="#3F9469"
-            radius={[4, 4, 0, 0]}
+            radius={[3, 3, 0, 0]}
+            maxBarSize={18}
           />
 
           <Bar
             dataKey="expense"
             name="Gastos"
             fill="#C2584B"
-            radius={[4, 4, 0, 0]}
+            radius={[3, 3, 0, 0]}
+            maxBarSize={18}
           />
 
           <Bar
             dataKey="balance"
             name="Balance"
             fill="#35707E"
-            radius={[4, 4, 0, 0]}
+            radius={[3, 3, 0, 0]}
+            maxBarSize={14}
           />
         </BarChart>
       </ResponsiveContainer>

@@ -1,6 +1,6 @@
 export function AnnualSummaryRow({ label, income, expense, balance }) {
   return (
-    <div className="grid grid-cols-4 h-11 items-center border-b border-[#E2E8E3] bg-white p-2 text-sm gap-6">
+    <div className="grid grid-cols-4 h-11 items-center border-b border-[#E2E8E3] bg-white p-2 text-xs lg:text-sm gap-6">
       <p>
         {label}
       </p>
