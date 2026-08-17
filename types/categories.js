@@ -2,7 +2,7 @@ import { Wallet, Car, Gamepad2, Cpu, TrendingUp, Dumbbell, Gem, RefreshCw, House
 
 export const CATEGORIES = {
   SALARY: {
-      label: 'Nomina',
+      label: 'Nómina',
       icon: Wallet,
       expense: false,
       income: true,
