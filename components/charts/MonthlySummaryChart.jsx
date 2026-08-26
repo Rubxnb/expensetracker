@@ -23,7 +23,7 @@ export function MonthlySummaryChart({ summary }) {
     };
 
     return {
-      month: name.charAt(0), // E F M A M J J A S O N D
+      month: name === 'Agosto' ? 'A ' : name.charAt(0), // E F M A M J J A S O N D
       income: month.income,
       expense: month.expense,
       balance: month.balance,
